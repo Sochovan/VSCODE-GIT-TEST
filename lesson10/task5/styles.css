@@ -12,9 +12,8 @@
 .article {
     background-color: bisque;
     flex-grow: 1;
-    width: 292px;
+    width: 300px;
     margin: 8px;
-    padding: 16px;
 }
 
 .articles-list {
