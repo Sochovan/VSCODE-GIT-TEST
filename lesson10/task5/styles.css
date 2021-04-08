@@ -14,6 +14,7 @@
     flex-grow: 1;
     width: 300px;
     margin: 8px;
+    padding: 16px;
 }
 
 .articles-list {
