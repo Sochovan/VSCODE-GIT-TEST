@@ -32,7 +32,8 @@
 .list {
     display: flex;
     list-style-type: none;
-    margin: 0px
+    margin: 0px;
+    padding-inline-start: 16px;
 }
 
 .list-item {
@@ -74,6 +75,7 @@
     margin: 0px;
     list-style-type: none;
     justify-content: space-around;
+    padding-inline-start: 16px;
 }
 
 .ul-flex-item {
