@@ -1,0 +1,90 @@
+.header {
+    position: fixed;
+    background-color: darkturquoise;
+    height: 40px;
+    width: 100%;
+}
+
+.navigation {
+    height: 40px;
+    position: absolute;
+    /* 2 */
+    top: 50%;
+    /* 3 */
+    transform: translate(0, -50%)
+}
+
+.nav-item {
+    color: white;
+    float: left;
+    padding: 10px;
+    margin-left: 16px;
+}
+
+.content {
+    height: 5000px;
+    background-color: beige;
+    position: relative;
+    top: 40px;
+}
+
+.head {
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-right: -50%; */
+    transform: translate(-50%, -50%)
+}
+
+
+/* .ear {
+    width: 40px;
+    height: 60px;
+    background-color: brown;
+} */
+
+.ear_right {
+    width: 40px;
+    height: 60px;
+    background-color: brown;
+    position: absolute;
+    right: -40px;
+    top: -60px;
+}
+
+.ear_left {
+    width: 40px;
+    height: 60px;
+    background-color: brown;
+    position: absolute;
+    right: 200px;
+    top: -60px;
+}
+
+.eye_right {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+}
+
+.eye_left {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+}
+
+body {
+    position: relative;
+}
