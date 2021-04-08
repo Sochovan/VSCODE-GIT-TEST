@@ -2,39 +2,29 @@
     box-sizing: border-box;
 }
 
-body {
-    position: static;
-}
-
 .header {
-    position: sticky;
+    position: fixed;
     background-color: darkturquoise;
     height: 40px;
     width: 100%;
     top: 0px;
 }
 
-.navigation {
-    height: 40px;
-    position: absolute;
-    /* 2 */
-    top: 50%;
-    /* 3 */
-    transform: translate(0, -50%)
+.nav-list {
+    color: white
 }
 
 .nav-item {
-    color: white;
-    float: left;
-    padding: 10px;
+    color: darkturquoise float: left;
     margin-left: 16px;
+    position: absolute;
+    top: 50%;
 }
 
 .content {
     height: 5000px;
     background-color: beige;
-    position: relative;
-    top: 40px;
+    margin-top: 40px;
 }
 
 .head {
@@ -43,7 +33,7 @@ body {
     width: 200px;
     margin: 0;
     position: absolute;
-    top: 5%;
+    top: 50%;
     left: 50%;
     /* margin-right: -50%; */
     transform: translate(-50%, -50%)
