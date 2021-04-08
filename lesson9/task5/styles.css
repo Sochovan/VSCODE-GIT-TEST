@@ -21,13 +21,13 @@
 .nav-item {
     color: white;
     margin-left: 16px;
-    display: inline-block;
+    display: block;
     /* margin-top: 0px; */
     height: 40px;
     position: relative;
     top: 50%;
     float: left;
-    transform: translate(0, -25%)
+    transform: translate(0, -50%)
 }
 
 .content {
