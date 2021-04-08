@@ -1,8 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: static;
+}
+
 .header {
-    position: fixed;
+    position: sticky;
     background-color: darkturquoise;
     height: 40px;
     width: 100%;
+    top: 0px;
 }
 
 .navigation {
@@ -34,7 +43,7 @@
     width: 200px;
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 6%;
     left: 50%;
     /* margin-right: -50%; */
     transform: translate(-50%, -50%)
@@ -83,8 +92,4 @@
     position: absolute;
     top: 80px;
     right: 40px;
-}
-
-body {
-    position: relative;
 }
