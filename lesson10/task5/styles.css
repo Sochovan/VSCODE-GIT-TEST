@@ -3,9 +3,7 @@
     justify-content: center;
 }
 
-.header-text {
-    margin: 0px;
-}
+.header-text {}
 
 .article {
     margin: 8px;
