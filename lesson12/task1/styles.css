@@ -2,14 +2,13 @@
     box-sizing: border-box;
 }
 
-
-/* body {
-    margin: 32px;
-} */
-
 html {
     font-family: roboto, sans-serif;
     font-size: 18px;
+    /* margin: 32px; */
+}
+
+section {
     margin: 32px;
 }
 
