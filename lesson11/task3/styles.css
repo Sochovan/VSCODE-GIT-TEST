@@ -4,7 +4,6 @@
 
 .dropdown {
     margin: 16px;
-    flex-basis: auto;
 }
 
 .menu-button {
@@ -14,8 +13,6 @@
     font-size: 16px;
     padding: 16px;
     cursor: pointer;
-    line-height: 3;
-    flex-basis: auto;
 }
 
 .menu-button:hover {
@@ -31,7 +28,6 @@
     z-index: 1;
     list-style-type: none;
     display: none;
-    flex-basis: auto;
 }
 
 .menu-item {
