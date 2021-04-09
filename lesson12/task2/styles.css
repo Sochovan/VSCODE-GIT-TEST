@@ -13,6 +13,7 @@ h1 {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin: 16px auto;
 }
 
 div {
