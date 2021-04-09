@@ -10,3 +10,7 @@ pre {
     margin: 0;
     display: block;
 }
+
+html {
+    margin: 0;
+}
