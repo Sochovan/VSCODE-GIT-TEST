@@ -4,6 +4,7 @@
 
 .dropdown {
     margin: 16px;
+    flex-basis: auto;
 }
 
 .menu-button {
