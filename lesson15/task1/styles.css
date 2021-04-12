@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    margin: 0;
-}
-
 .main-image {
     margin: 50px auto;
     max-width: 100%;
@@ -15,6 +11,10 @@ html {
 
 .gallery {
     display: flex;
+}
+
+div {
+    display: block;
 }
 
 figcaption {
