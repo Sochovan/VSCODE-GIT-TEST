@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .main-image {
@@ -11,10 +11,6 @@
 
 .gallery {
     display: flex;
-}
-
-div {
-    display: block;
 }
 
 figcaption {
