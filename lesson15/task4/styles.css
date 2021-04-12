@@ -4,8 +4,11 @@
 
 .image {
     max-width: 100%;
-    display: flex;
-    margin: 0px auto;
+    display: block;
+    margin: auto;
+}
+
+.image-container {
     position: relative;
 }
 
@@ -17,20 +20,15 @@ span {
     text-transform: uppercase;
     font-weight: 700;
     opacity: 0.5;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 154px;
-    left: 410px;
+    top: calc(50% - 25px);
+    left: calc(50% - 100px);
 }
 
 span:hover {
     opacity: 1;
     cursor: pointer;
-}
-
-.image-container {
-    display: flex;
 }
