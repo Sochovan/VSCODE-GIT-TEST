@@ -25,10 +25,11 @@ body {
 }
 
 .form-control {
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .form-label {
+    padding-bottom: 4px;
     display: block;
 }
 
