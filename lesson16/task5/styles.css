@@ -14,16 +14,19 @@ div {
 }
 
 input[type="radio"] {
-    display: inline;
+    display: inline-block;
+    ;
     margin: 0;
 }
 
 select {
     margin: 8px;
-    display: block;
+    display: inline-block;
+    ;
 }
 
 textarea {
-    margin: 8px 8px 12px 8px;
-    display: block;
+    margin: 8px;
+    display: inline-block;
+    ;
 }
