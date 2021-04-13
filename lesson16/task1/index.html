@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form>
+        <div class="form-control">
+            <input type="text" id="last-name-form-control" name="lastName" value="Emerson" readonly>
+            <label for="last-name-form-control">LastName</label>
+        </div>
+        <div class="form-control">
+            <input type="number" value="17" name="age" min="10" max="20">
+        </div>
+        <div class="form-control">
+            <label>
+            <input type="checkbox" name="agree">
+            Agree with therms and conditions
+          </label>
+        </div>
+        <div class="form-control">
+            <input type="radio" id="gender-male" name="gender">
+            <label for="gender-male">Male</label>
+            <input type="radio" id="gender-female" name="gender">
+            <label for="gender-female">Female</label>
+            <input type="radio" id="gender-secret" name="gender">
+            <label for="gender-secret">Secret</label>
+        </div>
+        <div class="form-control">
+            <textarea maxlength="10" name="description" placeholder="Write description" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+        <!-- <label class="checkbox">
+            Checkbox
+            <input id="custom-checkbox" type="checkbox" name="agree1">
+            <span class="checkmark" for="custom-checkbox"></span>
+        </label> -->
+    </form>
+</body>
+
+</html>
