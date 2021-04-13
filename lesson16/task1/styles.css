@@ -14,7 +14,8 @@
     height: 0;
 } */
 
-.checkmark {
+
+/* .checkmark {
     width: 25px;
     height: 25px;
     background-color: #d3d3d3;
@@ -32,4 +33,4 @@
 
 .checkbox input:checked+.checkmark {
     background-color: #0f0;
-}
+} */
