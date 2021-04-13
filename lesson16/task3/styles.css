@@ -1,5 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 .checkbox {
-    padding: 35px;
+    padding-left: 35px;
     font-size: 24px;
     margin: 16px;
     position: relative;
