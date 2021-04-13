@@ -11,6 +11,7 @@ div {
 
 input[type="radio"] {
     display: inline;
+    margin: 0;
 }
 
 select {
