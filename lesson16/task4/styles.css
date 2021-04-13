@@ -53,3 +53,7 @@ body {
     border-radius: 4px;
     height: 32px;
 }
+
+.form-input:invalid {
+    border: 3px #ff0000
+}
