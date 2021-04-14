@@ -3,12 +3,19 @@
 }
 
 table {
-    width: 500px;
     margin: 16px;
+    width: 500px;
 }
 
-th,
-td {
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td,
+th {
     padding: 4px;
     text-align: right;
     height: 40px;
@@ -18,16 +25,7 @@ div {
     overflow-x: auto;
 }
 
-tbody>tr:nth-child(odd) {
-    background-color: #f2f2f2;
-}
-
-tbody>tr:hover {
-    background-color: #aaa;
-    color: #fff;
-}
-
-thead {
+th {
     background-color: aqua;
 }
 
@@ -39,9 +37,11 @@ caption {
     margin-bottom: 8px;
 }
 
-table,
-td,
-th {
-    border-collapse: collapse;
-    border: 1px solid black;
+tbody>tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+tbody>tr:hover {
+    background-color: #aaa;
+    color: #fff;
 }
