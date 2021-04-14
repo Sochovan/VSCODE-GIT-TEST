@@ -6,7 +6,6 @@ table {
     width: 500px;
     margin: 16px;
     border: 1px solid black;
-    border-collapse: collapse;
 }
 
 th,
@@ -40,4 +39,10 @@ tfoot {
 
 caption {
     margin-bottom: 8px;
+}
+
+table,
+td,
+th {
+    border-collapse: collapse;
 }
