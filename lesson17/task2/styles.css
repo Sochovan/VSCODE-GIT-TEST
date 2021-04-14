@@ -1,6 +1,6 @@
-/* * {
+* {
     box-sizing: border-box;
-} */
+}
 
 table {
     width: 500px;
@@ -42,5 +42,5 @@ tfoot {
 }
 
 caption {
-    margin-bottom: 8px;
+    margin: 8px;
 }
