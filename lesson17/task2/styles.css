@@ -5,12 +5,10 @@
 table {
     width: 500px;
     margin: 16px;
-    border: 1px solid black;
 }
 
 th,
 td {
-    border: 1px solid black;
     padding: 4px;
     text-align: right;
     height: 40px;
@@ -45,4 +43,5 @@ table,
 td,
 th {
     border-collapse: collapse;
+    border: 1px solid black;
 }
