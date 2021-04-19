@@ -1,0 +1,47 @@
+        * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .block {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        width: 250px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: coral;
+        line-height: 100px;
+        position: absolute;
+        animation: move;
+        transition-timing-function: ease;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes move {
+        0% {
+            top: -100px;
+            /* }
+    25% {
+        top: 0;
+    }
+    50% {
+        top: 100px;
+    }
+    75% {
+        top: 200px;
+    } */
+            100% {
+                top: calc(50vh-50px)
+            }
+        }
