@@ -48,7 +48,7 @@ body {
 
 .units-list {
     line-height: 1.75em;
-    font-size: 1.125em;
+    /* font-size: 1.125em; */
 }
 
 .css-units {
