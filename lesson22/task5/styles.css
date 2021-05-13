@@ -1,0 +1,138 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #555;
+        font-size: 16px;
+    }
+    
+    .header {
+        color: #fff;
+        background-image: linear-gradient(60deg, red, orange);
+        text-align: center;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .footer {
+        background-color: #e5e5e5;
+        padding: 0.5em;
+        text-align: center;
+    }
+    
+    .main {
+        display: flex;
+        flex-grow: 1;
+    }
+    
+    .navigation {
+        padding: 0.5em;
+        width: 20%;
+    }
+    
+    .section {
+        padding: 0.5em;
+        width: 60%;
+        font-size: 1.25em;
+    }
+    
+    img {
+        max-width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .news {
+        padding: 0.5em;
+        width: 20%;
+    }
+    
+    .units-list {
+        line-height: 1.75em;
+    }
+    
+    .css-units {
+        color: #8b0000;
+        background-color: #e5e5e5;
+        font-weight: 700;
+        font-size: 1.125em;
+    }
+    
+    .section__header {
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .nav-list {
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    .nav-list-item {
+        background-color: #808080;
+        height: 2em;
+        margin-bottom: 0.5em;
+        display: flex;
+    }
+    
+    .nav-list-link {
+        color: white;
+        text-decoration: none;
+        flex-grow: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: auto;
+        padding: 0px 0.5em 0px 0.5em;
+    }
+    
+    @media screen and (max-width:600px) {
+        .main {
+            flex-direction: column;
+        }
+        .navigation {
+            width: 100%;
+        }
+        .section {
+            width: 100%;
+        }
+        .news {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (min-width:601px) and (max-width:900px) {
+        .nav-text {
+            display: flex;
+        }
+        .navigation {
+            width: 20%;
+        }
+        .main {
+            display: block;
+        }
+        .news {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (min-width:901px) {
+        .nav-text {
+            display: flex;
+            width: 80%;
+        }
+        .navigation {
+            flex-grow: 1;
+        }
+        .news {
+            width: 20%;
+        }
+        .section {
+            flex-grow: 1;
+        }
+    }
