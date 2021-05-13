@@ -23,14 +23,13 @@ html {
 }
 
 .navigation {
+    width: 20%;
     padding: 0.5em;
-    margin: 0;
 }
 
 .nav-list {
     list-style-type: none;
-    width: 20%;
-    padding: 0%;
+    padding: 0;
 }
 
 .nav-list-item {
