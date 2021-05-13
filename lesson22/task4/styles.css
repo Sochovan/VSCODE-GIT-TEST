@@ -23,10 +23,9 @@ html {
 }
 
 .nav-list {
-    padding: 0;
+    padding: 0%;
     list-style-type: none;
     width: 20%;
-    padding: 0.5em;
 }
 
 .nav-list-item {
@@ -37,6 +36,7 @@ html {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    padding: 0.5em;
 }
 
 .nav-list-link {
