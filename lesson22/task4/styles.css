@@ -37,7 +37,7 @@ html {
     background-color: #808080;
     color: #fff;
     height: 2em;
-    margin: 0.5em;
+    margin-bottom: 0.5em;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
