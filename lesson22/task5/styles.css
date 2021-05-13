@@ -128,11 +128,13 @@
         }
         .navigation {
             flex-grow: 1;
+            width: 20%;
         }
         .news {
             width: 20%;
         }
         .section {
-            flex-grow: 1;
+            flex-grow: 3;
+            width: 60%;
         }
     }
