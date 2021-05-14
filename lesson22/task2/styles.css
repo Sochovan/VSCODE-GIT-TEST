@@ -3,7 +3,6 @@
                 height: 200px;
                 display: flex;
                 flex-grow: 1;
-                /* width: 33.3%; */
             }
             
             .product-list {
@@ -17,7 +16,6 @@
                 background-color: #0ff;
                 height: 200px;
                 display: flex;
-                /* width: 33.3%; */
                 flex-grow: 1;
             }
             
