@@ -1,12 +1,5 @@
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.products {
-  display: flex;
-  flex-grow: 2;
-  flex-direction: column;
+* {
+  box-sizing: border-box;
 }
 
 .navigation {
@@ -30,17 +23,6 @@
   background-color: #0ff;
 }
 
-@media screen and (min-width: 600px) {
-  .products {
-    flex-direction: row;
-    flex: 2;
-  }
-}
-@media screen and (min-width: 900px) {
-  .container {
-    flex-direction: row;
-  }
-}
 span {
   font-family: Verdana;
   margin: auto;
@@ -50,8 +32,26 @@ span {
   text-transform: lowercase;
 }
 
-* {
-  box-sizing: border-box;
+.container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 900px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.products {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .products {
+    flex-direction: row;
+    flex: 2;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
