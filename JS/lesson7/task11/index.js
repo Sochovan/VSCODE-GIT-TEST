@@ -25,11 +25,17 @@
 //     return filterNames;
 // };
 
+// const filterNames = (arr, text) => {
+//     const arrNames = arr.filter(elem => elem.includes(text) && elem.length > 5);
+//     return arrNames;
+// };
+
+
 const filterNames = (arr, text) => {
-    const filterNames = arr.filter(elem => text.includes(elem) && elem.length > 5);
-    return filterNames;
+    const arrNames = arr.filter(elem => text.includes(elem) && elem.length > 5);
+    return arrNames;
 };
 
 const arrInit = ['Nastya', 'oliviya', 'Igor', 'Kcu'];
-const textInit = ('igor djiej Nastya wkndlk oliviya ');
+const textInit = ('ya');
 console.log(filterNames(arrInit, textInit));
