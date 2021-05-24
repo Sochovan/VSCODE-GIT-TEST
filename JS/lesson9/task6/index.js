@@ -1,10 +1,12 @@
 const getPeople = obj => {
-    const arrayNames = Object.values(obj);
-    console.log(arrayNames);
+    const array = Object.values(obj);
 
-    const array = arrayNames.map(elem => Object.values(elem));
-    return array;
-};
+    const flatArray = array
+        .flat(1);
+
+    const result = flatArray.map(elem => elem.name);
+    return result;
+}
 
 
 obj = {
