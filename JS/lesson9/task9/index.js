@@ -1,9 +1,12 @@
 function buildObject(keysList, valuesList) {
     let object = {};
-    for (let key in object) {
-        const
+    for (let i = 0; i < keysList.length; i++) {
+        object[keysList[i]] = valuesList[i];
+
     }
+    return object;
 }
+
 
 
 // / examples
