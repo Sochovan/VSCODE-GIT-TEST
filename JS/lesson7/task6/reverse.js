@@ -1,6 +1,6 @@
 //put your code here
 
-const reverseArray = arr => {
+export const reverseArray = arr => {
     if (!Array.isArray(arr)) {
         return null;
     }
