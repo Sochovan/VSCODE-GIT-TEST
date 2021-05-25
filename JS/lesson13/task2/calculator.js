@@ -9,7 +9,7 @@
 // import getSun from './calculator';
 
 
-export const getSquqredNumbers = arr =>
+export const getSquaredArray = arr =>
     arr.map(num => num * num);
 
 export const getOddNumbers = arr =>
