@@ -6,7 +6,7 @@
 
 
 // export default (a,b) => a + b; может быть тольо один, экспортируется без имени
-// import getSun from './calculator';
+// import getSum from './calculator';
 
 
 export const getSquaredArray = arr =>
