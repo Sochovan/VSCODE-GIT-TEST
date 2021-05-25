@@ -63,7 +63,7 @@ const multiRound = num => {
     const b = Math.round(num * 100) / 100;
     const c = Math.ceil(num * 100) / 100;
     const d = Math.trunc(num * 100) / 100;
-    const e = num.toFixed(2);
+    const e = +num.toFixed(2);
     return [a, b, c, d, e];
 }
 
