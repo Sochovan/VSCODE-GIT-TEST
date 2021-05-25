@@ -5,7 +5,7 @@
  * Чтобы eslint не ругался на эту ошибку, для этой задачи он отключен аннотацией eslint-disable
  * */
 
-const getAdults = obj => {
+export const getAdults = obj => {
     let newObj = {};
 
     for (let key in obj) {
