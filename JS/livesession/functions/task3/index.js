@@ -50,15 +50,6 @@
 // output:boolean;
 
 
-const squareArray = arr => {
-    if (!Array.isArray(arr)) {
-        return null;
-    }
-    return arr.map(num => num * num);
-}
-
-console.log(squareArray([1, 2, 4]));
-
 
 
 function isPrime(number) {
@@ -86,11 +77,17 @@ function getPrimes(num) {
 console.log(getPrimes(15));
 // =========================================================================
 
-const squareArray = arr => {
-    if (!Array.isArray(arr)) {
-        return null;
-    }
-    return arr.map(num => num * num);
-}
+// const squareArray = arr => {
+//     if (!Array.isArray(arr)) {
+//         return null;
+//     }
+//     return arr.map(num => num * num);
+// }
+
+// console.log(squareArray([1, 2, 4]));
+
+
+const squareArray = arr => Array.isArray(arr) ? arr.map(num => num * num) : null;
+
 
 console.log(squareArray([1, 2, 4]));
