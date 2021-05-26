@@ -24,19 +24,73 @@
 // }
 // getPrimes(58);
 
-function getPrimes(num) {
-    for (let index = 2; index <= num; index += 1) {
-        let isPrime = true;
+// function getPrimes(num) {
+//   for (let index = 2; index <= num; index += 1) {
+//     console.log('STEP #' + index);
+//         let isPrime = true;
 
-        for (let number = 2; number < index; number += 1) {
-            if (index % number === 0) {
-                isPrime = false;
-                break;
-            }
+//         for (let number = 2; number < index; number += 1) {
+//           console.log('index is: ' + index);
+//           console.log('number is: ' + number);
+
+//           if (index % number === 0) {
+//             console.log('number is not prime');
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+//         if (isPrime) {
+//             console.log(index);
+//         }
+//     }
+// }
+// console.log(getPrimes(15));
+
+// input:number
+// output:boolean;
+
+
+const squareArray = arr => {
+    if (!Array.isArray(arr)) {
+        return null;
+    }
+    return arr.map(num => num * num);
+}
+
+console.log(squareArray([1, 2, 4]));
+
+
+
+function isPrime(number) {
+    // let isPrime = true;
+
+    for (let innerNum = 2; innerNum < number; innerNum += 1) {
+
+        if (number % innerNum === 0) {
+            return false;
+
         }
-        if (isPrime) {
-            console.log(index);
+    }
+    return true;
+}
+
+function getPrimes(num) {
+    for (let number = 2; number <= num; number += 1) {
+
+
+        if (isPrime(number)) {
+            console.log(number);
         }
     }
 }
 console.log(getPrimes(15));
+// =========================================================================
+
+const squareArray = arr => {
+    if (!Array.isArray(arr)) {
+        return null;
+    }
+    return arr.map(num => num * num);
+}
+
+console.log(squareArray([1, 2, 4]));
