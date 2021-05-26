@@ -10,7 +10,6 @@
 
 // let message = 'Just learn it!';
 
-
 // // export
 // function sendMessage(name) {
 //     const sender = 'Gromcode';
@@ -23,7 +22,6 @@
 // sendMessage('Tom');
 // setMessage('Hello!');
 // sendMessage('Tom');
-
 
 // //another.js
 
@@ -38,14 +36,12 @@
 let message = 'Just learn it';
 
 function sendMessage(name) {
-
-    const sender = 'Gromcode';
-    console.log(`${name}, ${message}! Your ${sender}`);
+  const sender = 'Gromcode';
+  console.log(`${name}, ${message}! Your ${sender}`);
 }
 
 function setMessage(text) {
-    message = text;
-
+  message = text;
 }
 
 setMessage('Good job');

@@ -32,36 +32,28 @@
 // //если перенести let message = 'Hi!' внутрь функции createMessage, то
 // // Ann, Hi!. You Gromecode
 
-
-
-let message = 'Just learn it!';
+let message = 'Just learn it';
 let sender = 'Gromcode';
 
 const createMessenger = () => {
+  function sendMessage(name) {
+    console.log(`${name}, ${message}! Your ${sender}`);
+  }
 
+  function setMessage(text) {
+    message = text;
+  }
 
+  function setSender(sign) {
+    sender = sign;
+  }
 
-    function sendMessage(name) {
-
-        console.log(`${name}, ${message}! Your ${sender}`);
-    }
-
-    function setMessage(text) {
-        message = text;
-    }
-
-    function setSender(sign) {
-        sender = sign;
-    }
-
-    return {
-        sendMessage,
-        setMessage,
-        setSender,
-    };
-
+  return {
+    sendMessage,
+    setMessage,
+    setSender,
+  };
 };
-
 
 // export default createMessenger;
 
