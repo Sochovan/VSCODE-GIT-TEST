@@ -21,3 +21,28 @@
 // }
 
 // console.log(i);
+
+const createCalculator = () => {
+  let a = 0;
+  console.log(a);
+
+  const getMemo = () => a;
+  console.log(getMemo());
+
+  const add = num => (a += num);
+  console.log(add(8));
+  const decrease = num => (a -= num);
+  console.log(decrease(6));
+  const reset = () => (a = 0);
+  console.log(reset());
+
+  return {
+    getMemo,
+    add,
+    decrease,
+    reset,
+  };
+};
+
+// export { createCalculator };
+console.log(createCalculator());
