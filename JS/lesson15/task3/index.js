@@ -1,24 +1,42 @@
+// algo
+
+// 1. Create methods - they record input message in memory with the definite type
+//  1.1 create empty array;
+//  1.2 crete record;
+//  1.3 push record to array;
+// 2. Create method - input type of message -> create array with this type of message, sorted by the creating Date
+//   2.1.if str = undefined -> return the hole array sorted by creating date;
+//   2.2 check if the input string = type of message
+//   2.3 create array of messages with definite type
+
 const createLogger = () => {
-  const arr = [];
+  let arr = [];
+  const warn = message =>
+    arr.push({
+      message: message,
+      dateTime: new Date(),
+      type: 'warn',
+    });
+  const log = message =>
+    arr.push({
+      message: message,
+      dateTime: new Date(),
+      type: 'log',
+    });
+  const error = message =>
+    arr.push({
+      message: message,
+      dateTime: new Date(),
+      type: 'error',
+    });
 
-  function warn(message) {
-    arr.push({ message: message, dateTime: new Date(), type: 'warn' });
-    console.log(arr);
-  }
+  const getRecords = str => {
+    if (str === undefined) {
+      return arr.sort((a, b) => b.dateTime - a.dateTime);
+    }
+    return arr.filter(elem => elem.type === str).sort((a, b) => b.dateTime - a.dateTime);
+  };
 
-  function log(message) {
-    arr.push({ message: message, dateTime: new Date(), type: 'log' });
-    console.log(arr);
-  }
-
-  function error(message) {
-    arr.push({ message: message, dateTime: new Date(), type: 'error' });
-    console.log(arr);
-  }
-
-  function getRecords(type) {
-    arr.filter();
-  }
   return {
     warn,
     log,
@@ -27,87 +45,15 @@ const createLogger = () => {
   };
 };
 
+export { createLogger };
+
 const logger = createLogger();
-logger.warn('User try to restricted page');
-const logger2 = createLogger();
-logger2.log('User logged in');
+console.log(logger.warn('User try to restricted page'));
 
-// let message = 'Just learn it';
+console.log(logger.log('User logged in'));
 
-// function sendMessage(name) {
-//   const sender = 'Gromcode';
-//   console.log(`${name}, ${message}! Your ${sender}`);
-// }
-
-// function setMessage(text) {
-//   message = text;
-// }
-
-// setMessage('Good job');
-// sendMessage('Ann');
-
-// const logger = createLogger();
-// logger.log('User logged in');
-// logger.warn('User try to restricted page');
-// logger.log('User logged out');
-// logger.error('Unexpected error on the site');
-// logger.getRecords();
-
-// const createLogger = () => {
-//   let arr = [];
-//   let dateTime = new Date();
-
-//   const warn = message =>
-//     arr.push('message: ' + message + ', dateTime: ' + dateTime + ', type: warn');
-
-//   const log = message =>
-//     arr.push('message: ' + message + ', dateTime: ' + dateTime + ', type: log');
-
-//   const error = message =>
-//     arr.push('message: ' + message + ', dateTime: ' + dateTime + ', type: error');
-
-//   return {
-//     warn,
-//     log,
-//     error,
-//   };
-// };
-
-// ------------------------------------------------------------------------------
-// algo-----------------------------
-// 1.
-
-// const createLogger = () => {
-//   const arr = [];
-//   let message = 'Hi, ';
-
-//   function warn(text) {
-//     let type = 'warn';
-//     arr.push({ message: message, dateTime: new Date(), type: type });
-//     console.log(arr);
-//   }
-
-//   function log() {
-//     let type = 'log';
-//     arr.push({ message: message, dateTime: new Date(), type: type });
-//     console.log(arr);
-//   }
-
-//   function error() {
-//     let type = 'error';
-//     arr.push({ message: message, dateTime: new Date(), type: type });
-//     console.log(arr);
-//   }
-
-//   function getRecords(type) {
-//     arr.filter();
-//   }
-//   return {
-//     warn,
-//     log,
-//     error,
-//     getRecords,
-//   };
-// };
-
-// console.log(createLogger());
+console.log(logger.warn('Unexpected error on the site'));
+console.log(logger.getRecords());
+console.log(logger.getRecords('log'));
+console.log(logger.getRecords('error'));
+console.log(logger.getRecords('warn'));
