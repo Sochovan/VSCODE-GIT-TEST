@@ -5,5 +5,3 @@ const setButton = buttonText => {
 
   button.innerHTML = buttonText;
 };
-
-console.log(setButton());
