@@ -8,6 +8,9 @@ function sayName() {
 }
 
 const sayStudentName = sayName.bind(student);
+const a = sayStudentName(sayName);
+console.log(a);
+
 console.log(sayStudentName());
 
 const sayBruceName = sayName.bind({ name: 'Bruce' });
@@ -89,10 +92,10 @@ console.log(printSpecialTransaction);
  * printSpecialTransaction не должна принимать ни одного аргумента
  */
 
-export {
-  sayStudentName,
-  sayBruceName,
-  specialGreeting,
-  getUkrainePopulation,
-  printSpecialTransaction,
-};
+// export {
+//   sayStudentName,
+//   sayBruceName,
+//   specialGreeting,
+//   getUkrainePopulation,
+//   printSpecialTransaction,
+// };
