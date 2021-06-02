@@ -1,4 +1,4 @@
-// export { getTitle, getDescription, getPlans, getGoal };
+export { getTitle, getDescription, getPlans, getGoal };
 
 const getTitle = () => {
   const text = document.querySelector('.title');
