@@ -1,4 +1,6 @@
-export const finishList = () => {
+export { finishList };
+
+const finishList = () => {
   const list = document.querySelector('ul');
   const parentElem = document.ul;
   const firstItem = document.createElement('li');
