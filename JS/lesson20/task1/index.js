@@ -54,39 +54,39 @@
 // ==================================================================
 // задача1
 
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-  static compare(user1, user2) {
-    // статический метод он есть только у класс, а не у экземпляров, поэтому если его вызвать на console.log(user1.compare), будет undefined
-    return user1.age - user2.age;
-  }
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   static compare(user1, user2) {
+//     // статический метод он есть только у класс, а не у экземпляров, поэтому если его вызвать на console.log(user1.compare), будет undefined
+//     return user1.age - user2.age;
+//   }
 
-  sayHi() {
-    console.log(`Hi, I am ${this.name}`);
-  }
-  requestNewPhoto() {
-    console.log(`New photo request was sent for ${this.name}`);
-  }
-  setAge(age) {
-    if (age < 0) {
-      return false;
-    }
-    this.age = age;
-    if (age >= 25) {
-      console.log(this.requestNewPhoto());
-    }
+//   sayHi() {
+//     console.log(`Hi, I am ${this.name}`);
+//   }
+//   requestNewPhoto() {
+//     console.log(`New photo request was sent for ${this.name}`);
+//   }
+//   setAge(age) {
+//     if (age < 0) {
+//       return false;
+//     }
+//     this.age = age;
+//     if (age >= 25) {
+//       console.log(this.requestNewPhoto());
+//     }
 
-    return age;
-  }
-}
-console.log(User.sayHi);
-const user1 = new User('Tom', 17);
-const user2 = new User('Tom', 34);
-console.log(User.compare(user1, user2));
-console.log(user1);
+//     return age;
+//   }
+// }
+// console.log(User.sayHi);
+// const user1 = new User('Tom', 17);
+// const user2 = new User('Tom', 34);
+// console.log(User.compare(user1, user2));
+// console.log(user1);
 //
 // (User { name: "Tom", age: 17 }
 // age: 17
@@ -126,3 +126,42 @@ console.log(user1);
 // console.log(user1);
 // user1.sayHi();
 // user1.requestNewPhoto();
+
+// ===========================================================================================
+// задача с урока1
+
+// export {User};
+
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  sayHi() {
+    console.log(`Hi, I am ${this.name}`);
+  }
+  requestNewPhoto() {
+    console.log(`New photo request was sent for ${this.name}`);
+  }
+  setAge(age) {
+    if (age < 0) {
+      return false;
+    }
+    this.age = age;
+    if (age >= 25) {
+      console.log(this.requestNewPhoto());
+    }
+    return age;
+  }
+
+  static createEmpty() {
+    const user1 = { name: '', age: null };
+    return user1;
+  }
+}
+
+console.log(User.sayHi);
+const user1 = new User('Tom', 17);
+const user2 = new User('Tom', 34);
+console.log(User.createEmpty());
+console.log(user1);

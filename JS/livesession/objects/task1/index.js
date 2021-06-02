@@ -75,3 +75,12 @@ console.log(obj3);
 const obj4 = { name: 'Test', surname: 'User', address: 'Kyiv' };
 console.log(addPropertyV3(obj4, 'address', 'Lviv'));
 console.log(obj4);
+
+function addPropertyV4(obj, key, value) {
+  return { ...obj, [key]: value };
+}
+console.log(addPropertyV4({ name: 'LzyBob', lastname: 'Lazy' }, 'age', 45));
+
+const obj5 = { name: 'Test', surname: 'User', address: 'Kyiv' };
+console.log(addPropertyV3(obj5, 'address', 'Lviv'));
+console.log(obj5);
