@@ -1,21 +1,21 @@
-export { getTitle, getDescription, getPlans, getGoal };
+// export { getTitle, getDescription, getPlans, getGoal };
 
 const getTitle = () => {
   const text = document.querySelector('.title');
-  return text.textContent();
+  return text.textContent;
 };
 
 const getDescription = () => {
   const description = document.querySelector('.about');
-  return description.innerText();
+  return description.innerText;
 };
 
 const getPlans = () => {
   const plan = document.querySelector('.plans');
-  return plan.innerHTML();
+  return plan.innerHTML;
 };
 
 const getGoal = () => {
   const goal = document.querySelector('.goal');
-  return goal.outerHTML();
+  return goal.outerHTML;
 };
