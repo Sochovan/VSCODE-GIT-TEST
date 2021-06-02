@@ -1,7 +1,7 @@
 export { setButton };
 
 const setButton = buttonText => {
-  const button = document.querySelector('body');
-  const textButton = document.createElement('Button');
-  textButton.innerHTML = buttonText;
+  const container = document.querySelector('body');
+  const button = document.querySelector('button');
+  button.innerHTML = buttonText;
 };
