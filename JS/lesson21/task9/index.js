@@ -1,5 +1,3 @@
-export { finishList };
-
 const finishList = () => {
   const list = document.querySelector('ul');
   const parentElem = document.ul;
@@ -17,3 +15,5 @@ const finishList = () => {
   eightthItem.textContent = '8';
   parentElem.appendChild(eightthItem);
 };
+
+export { finishList };
