@@ -11,5 +11,3 @@ const getInputElement = () => {
   console.dir(inputElem);
   return inputElem;
 };
-
-console.log(titleElem);
