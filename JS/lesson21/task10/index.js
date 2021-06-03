@@ -1,4 +1,4 @@
-// export { finishForm };
+export { finishForm };
 
 const finishForm = () => {
   const form = document.querySelector('.login-form');
