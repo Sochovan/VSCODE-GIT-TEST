@@ -1,7 +1,7 @@
 export { finishList };
 
 const finishList = () => {
-  const list = document.querySelector('ul');
+  const container = document.querySelector('ul');
   const parentElem = document.ul;
   const firstItem = document.createElement('li');
   firstItem.textContent = '1';
