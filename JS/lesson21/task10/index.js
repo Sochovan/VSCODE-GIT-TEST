@@ -6,7 +6,7 @@ const finishForm = () => {
   firstInput.setAttribute('type', 'password');
   const input = document.createElement('input');
 
-  input.setAttribute('name', 'login');
+  input.name = 'login';
   form.append(input);
 };
 // console.log(finishForm());
