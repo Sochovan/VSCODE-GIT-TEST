@@ -16,4 +16,3 @@ const finishList = () => {
   eightthItem.textContent = '8';
   listItem.append(eightthItem);
 };
-console.log(finishList());
