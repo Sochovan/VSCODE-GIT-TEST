@@ -1,12 +1,10 @@
 export { finishList };
 
 const finishList = () => {
-  const container = document.querySelector('body');
   const listItem = document.querySelector('ul');
-  const parentElem = document.ul;
   const firstItem = document.createElement('li');
   firstItem.textContent = '1';
-  document.ul.prepend(firstItem);
+  listItem.prepend(firstItem);
   const fourthItem = document.createElement('li');
   fourthItem.textContent = '4';
   const fifthItem = document.querySelector('.special');
@@ -16,5 +14,6 @@ const finishList = () => {
   fifthItem.after(sixthItem);
   const eightthItem = document.createElement('li');
   eightthItem.textContent = '8';
-  parentElem.appendChild(eightthItem);
+  listItem.append(eightthItem);
 };
+console.log(finishList());
