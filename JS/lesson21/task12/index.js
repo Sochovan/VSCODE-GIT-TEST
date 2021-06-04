@@ -1,6 +1,6 @@
-export { squareNumbers };
+export { squaredNumbers };
 
-const squareNumbers = () => {
+const squaredNumbers = () => {
   const cont = document.querySelectorAll('.number');
 
   for (let i = 0; i < cont.length; i += 1) {
@@ -14,4 +14,4 @@ const squareNumbers = () => {
     cont[i].dataset.squaredNumber = sqrt;
   }
 };
-// console.log(squareNumbers());
+// console.log(squaredNumbers());
