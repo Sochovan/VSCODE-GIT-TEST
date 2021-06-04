@@ -1,8 +1,8 @@
-export { manageClasses };
+// export { manageClasses };
 
 const manageClasses = () => {
-  const elem1 = document.querySelector('.one');
-  elem1.classList.add('selected');
+  const elem1 = document.getElementsByClassName('one');
+  elem1.classList.add('.selected');
   const elem2 = document.querySelector('.two');
   elem2.classList.remove('selected');
   const elem3 = document.querySelector('.three');
@@ -11,4 +11,4 @@ const manageClasses = () => {
   elem4.classList.add('another-class');
 };
 
-// console.log(manageClasses());
+console.log(manageClasses());
