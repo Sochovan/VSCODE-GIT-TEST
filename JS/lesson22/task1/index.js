@@ -34,7 +34,16 @@ const logGreyDiv = logTarget.bind(null, 'DIV', 'grey');
 const logGreyP = logTarget.bind(null, 'P', 'grey');
 const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
 
+divElem.addEventListener('click', logGreyDiv, { capture: true }); //тоже самое что и третьим аргументом добавить true
+divElem.addEventListener('click', logGreenDiv);
+
+pElem.addEventListener('click', logGreyP, true);
+pElem.addEventListener('click', logGreenP);
+
+spanElem.addEventListener('click', logGreySpan, true);
+spanElem.addEventListener('click', logGreenSpan);
 const clear = document.querySelector('.clear-btn');
+
 const clearList = () => {
   eventsListElem.innerHTML = '';
 };
