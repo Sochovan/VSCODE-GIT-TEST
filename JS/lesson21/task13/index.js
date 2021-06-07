@@ -1,14 +1,11 @@
-// export { getSection };
+// // export { getSection };
 
 const getSection = num => {
-  const arrDiv = document.querySelectorAll('div');
-  const arrSpan = document.querySelectorAll('span');
+  const spanElement = document.querySelector(`span[data-number="${num.toFixed()}"]`);
 
-  for (let i = 0; i < arrSpan.length; i += 1) {
-    if (`span[data-number = "${num}"]`) {
-      const a = arrDiv[i].closest('data-number');
-    }
-  }
-  return a;
+  const parentElement = spanElement.closest('.box');
+
+  return parentElement.getAttribute('data-section');
 };
+
 console.log(getSection());
