@@ -7,7 +7,8 @@ const manageClasses = () => {
   elem2.classList.remove('selected');
   const elem3 = document.querySelector('.three');
   elem3.classList.toggle('three_done');
-  const elem4 = document.getElementsByClassName('.some-class');
+  const elem4 = document.querySelector('.four');
+  elem4.classList.contains('some-class');
   elem4.classList.add('another-class');
 };
 
