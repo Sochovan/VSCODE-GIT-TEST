@@ -16,10 +16,11 @@ const validatorsByField = {
   email: [isRequired, isEmail],
   password: [isRequired],
 };
+
 const validate = (fieldName, value) => {
   const validators = validatorsByField[fieldName];
   return validators
-    .map(validator => validator(event.target.value))
+    .map(validator => validator(validator(value))
     .filter(errorText => errorText)
     .join(', ');
 };
