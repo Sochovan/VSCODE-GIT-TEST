@@ -43,11 +43,12 @@ clear.addEventListener('click', clearList);
 const attachHandlers = document.querySelector('.attach-handlers-btn');
 const attach = () => {
   divElem.addEventListener('click', logGreyDiv, { capture: true }); //тоже самое что и третьим аргументом добавить true
-  pElem.addEventListener('click', logGreyP, true);
-  spanElem.addEventListener('click', logGreySpan, true);
-
   divElem.addEventListener('click', logGreenDiv);
+
+  pElem.addEventListener('click', logGreyP, true);
   pElem.addEventListener('click', logGreenP);
+
+  spanElem.addEventListener('click', logGreySpan, true);
   spanElem.addEventListener('click', logGreenSpan);
 };
 attachHandlers.addEventListener('click', attach);
@@ -55,11 +56,12 @@ attachHandlers.addEventListener('click', attach);
 const removeHandlers = document.querySelector('.remove-handlers-btn');
 const remove = () => {
   divElem.removeEventListener('click', logGreyDiv, { capture: true }); //тоже самое что и третьим аргументом добавить true
-  pElem.removeEventListener('click', logGreyP, true);
-  spanElem.removeEventListener('click', logGreySpan, true);
-
   divElem.removeEventListener('click', logGreenDiv);
+
+  pElem.removeEventListener('click', logGreyP, true);
   pElem.removeEventListener('click', logGreenP);
+
+  spanElem.removeEventListener('click', logGreySpan, true);
   spanElem.removeEventListener('click', logGreenSpan);
 };
 removeHandlers.addEventListener('click', remove);
