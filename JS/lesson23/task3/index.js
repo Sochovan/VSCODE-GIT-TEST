@@ -56,12 +56,18 @@ function renderTasks(tasksList) {
         listItemElem.classList.add('list__item_done');
       }
 
-      const changeCheckbox = () => {
-        if (checkbox.checked) {
-          listItemElem.classList.add('list__item_done');
-        } else {
-          listItemElem.classList.remove('list__item_done');
+      const changeCheckbox = event => {
+        const isCheckbox = event.target.classList.contains('.list__item-checkbox');
+        if (!isCheckbox) {
+          return;
+          e;
         }
+
+        // if (checkbox.checked) {
+        //   listItemElem.classList.add('list__item_done');
+        // } else {
+        //   listItemElem.classList.remove('list__item_done');
+        // }
       };
       checkbox.addEventListener('change', changeCheckbox);
 
@@ -73,4 +79,5 @@ function renderTasks(tasksList) {
 
   listElem.append(...tasksElems);
 }
+
 renderTasks(tasks);
