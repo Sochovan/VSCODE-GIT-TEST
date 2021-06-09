@@ -16,6 +16,9 @@
 //   console.log('Page left'); // отправка аналитики перед закрытием страницы
 // });
 
+// algo
+//
+
 const listElem = document.querySelector('.list');
 const button = document.querySelector('.create-task-btn');
 const input = document.querySelector('.task-input');
@@ -27,15 +30,16 @@ const tasks = [
   { text: 'Visit doctor', done: false, id: Math.random() },
   { text: 'Buy meat', done: true, id: Math.random() },
 ];
+
 const pushButton = () => {
   if (input.value === '') {
     return;
   }
-  tasks.push({ text: input.value, done: false });
+  tasks.push({ text: input.value, done: false, id: Math.random() });
   console.log(tasks);
 
   input.value = '';
-  tasks.sort((a, b) => a.done - b.done);
+
   renderTasks(tasks);
 };
 
@@ -49,27 +53,28 @@ function renderTasks(tasksList) {
       listItemElem.classList.add('list__item');
       const checkbox = document.createElement('input');
       checkbox.setAttribute('type', 'checkbox');
-      checkbox.dataset.id = id;
       checkbox.checked = done;
-      checkbox.classList.add('list__item-checkbox');
+
       if (done) {
         listItemElem.classList.add('list__item_done');
       }
-
-      const changeCheckbox = event => {
+      checkbox.dataset.id = id;
+      const completeTask = event => {
         const isCheckbox = event.target.classList.contains('.list__item-checkbox');
         if (!isCheckbox) {
           return;
-          e;
         }
-
-        // if (checkbox.checked) {
-        //   listItemElem.classList.add('list__item_done');
-        // } else {
-        //   listItemElem.classList.remove('list__item_done');
-        // }
+        const idChecked = tasks.forEach(elem => {
+          if (elem.id === event.target.id) {
+            listItemElem.classList.add('list__item_done');
+          } else {
+            listItemElem.classList.remove('list__item_done');
+          }
+        });
       };
-      checkbox.addEventListener('change', changeCheckbox);
+
+      listElem.addEventListener('click', completeTask);
+      checkbox.classList.add('list__item-checkbox');
 
       listItemElem.append(checkbox, text);
 
