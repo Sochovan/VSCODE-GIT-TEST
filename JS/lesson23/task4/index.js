@@ -10,19 +10,7 @@ const tasks = [
 
 const button = document.querySelector('.create-task-btn');
 const input = document.querySelector('.task-input');
-const todoList = document.querySelector('ul');
-
-const createElem = () => {
-  if (input.value === '') {
-    return;
-  }
-
-  tasks.push({ text: input.value, done: false, id: Math.random() });
-  renderTasks(tasks);
-  input.value = '';
-};
-
-button.addEventListener('click', createElem);
+const todoList = document.querySelector('.list');
 
 const renderTasks = tasksList => {
   const tasksElems = tasksList
@@ -46,21 +34,34 @@ const renderTasks = tasksList => {
   listElem.append(...tasksElems);
 };
 
-const completeTask = event => {
-  const isCheckbox = event.target.classList.contains('.list__item-checkbox');
-  if (!isCheckbox) {
+// const completeTask = event => {
+//   const isCheckbox = event.target.classList.contains('.list__item-checkbox');
+//   if (!isCheckbox) {
+//     return;
+//   }
+// }
+
+const taskComplete = event => {
+  const isId = event.target.dataset.id;
+  console.log(isId);
+
+  const choseTask = tasks.find(elem => elem.id === +isId);
+
+  choseTask.done = !choseTask.done;
+
+  renderTasks(tasks);
+};
+todoList.addEventListener('click', taskComplete);
+const createElem = () => {
+  if (input.value === '') {
     return;
   }
 
-  const taskComplete = tasks.forEach(elem => {
-    if (elem.id === event.target.dataset.id) {
-      elem.classList.add('list__item_done');
-    } else {
-      elem.classList.remove('list__item_done');
-    }
-  });
+  tasks.push({ text: input.value, done: false, id: Math.random() });
+  renderTasks(tasks);
+  input.value = '';
 };
 
-input.addEventListener('click', completeTask);
+button.addEventListener('click', createElem);
 
 renderTasks(tasks);
