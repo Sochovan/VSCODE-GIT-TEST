@@ -10,7 +10,7 @@ const tasks = [
 
 const button = document.querySelector('.create-task-btn');
 const input = document.querySelector('.task-input');
-const todoList = document.querySelector('.list');
+const todoList = document.querySelector('ul');
 
 const renderTasks = tasksList => {
   const tasksElems = tasksList
@@ -33,13 +33,6 @@ const renderTasks = tasksList => {
   listElem.innerHTML = '';
   listElem.append(...tasksElems);
 };
-
-// const completeTask = event => {
-//   const isCheckbox = event.target.classList.contains('.list__item-checkbox');
-//   if (!isCheckbox) {
-//     return;
-//   }
-// }
 
 const taskComplete = event => {
   const isId = event.target.dataset.id;
