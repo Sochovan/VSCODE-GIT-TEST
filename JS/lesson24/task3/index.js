@@ -1,3 +1,5 @@
+export { getDiff };
+
 const getDiff = (startDate, endDate) => {
   const date1 = new Date(startDate);
   const date2 = new Date(endDate);
@@ -12,4 +14,4 @@ const getDiff = (startDate, endDate) => {
   return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 };
 
-console.log(getDiff(new Date(2020, 1, 5), new Date(2021, 1, 1)));
+// console.log(getDiff(new Date(2020, 1, 5), new Date(2021, 1, 1)));
