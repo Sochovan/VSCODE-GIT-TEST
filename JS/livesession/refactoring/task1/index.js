@@ -66,6 +66,33 @@
 //   balances[index] -= amount;
 //   return balances[index];
 // };
-const bal = [1400, 87, -6];
-console.log(withdraw(['Ann', 'John', 'User'], bal, 'John', 50));
-console.log(bal);
+// const bal = [1400, 87, -6];
+// console.log(withdraw(['Ann', 'John', 'User'], bal, 'John', 50));
+// console.log(bal);
+
+const arrRes = [1, 3, 5, 10, 15].filter(el => {
+  if (el > 5) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+});
+
+console.log(arrRes);
+
+// let arr = [1, 3, 4];
+// console.log(...arr);
+
+// let test = new Number(111);
+// let test1 = test;
+// test = 222;
+// console.log(test);
+
+// console.log(test1);
+
+let test = new Number(111);
+let test1 = test;
+test = new Number(222);
+console.log(test);
+
+console.log(test1);
