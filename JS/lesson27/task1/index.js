@@ -46,7 +46,7 @@
 
 localStorage.clear();
 
-localStorage.setItem('hobbies', JSON.stringify({ name: 'John' }));
+localStorage.setItem('hobbies', JSON.stringify({ name: 'Tom' }));
 localStorage.setItem('name', 'Tom');
 localStorage.setItem('age', JSON.stringify(17));
 
