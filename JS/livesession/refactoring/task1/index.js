@@ -70,7 +70,8 @@
 // console.log(withdraw(['Ann', 'John', 'User'], bal, 'John', 50));
 // console.log(bal);
 
-const arrRes = [1, 3, 5, 10, 15].filter(el => {
+const a = [1, 3, 5, 10, 15];
+const arrRes = a.filter(el => {
   if (el > 5) {
     console.log(true);
   } else {
@@ -79,6 +80,7 @@ const arrRes = [1, 3, 5, 10, 15].filter(el => {
 });
 
 console.log(arrRes);
+console.log(a);
 
 // let arr = [1, 3, 4];
 // console.log(...arr);
@@ -90,9 +92,9 @@ console.log(arrRes);
 
 // console.log(test1);
 
-let test = new Number(111);
-let test1 = test;
-test = new Number(222);
-console.log(test);
+// let test = new Number(111);
+// let test1 = test;
+// test = new Number(222);
+// console.log(test);
 
-console.log(test1);
+// console.log(test1);

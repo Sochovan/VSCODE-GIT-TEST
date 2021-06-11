@@ -30,17 +30,55 @@
 // console.log(localStorage.getItem('hobbies'));
 
 // // JSON(Javascript Object Notation) - метод обмена между клиентом и сервером
+// обязательно ключи в двойных ковычках "" и строки в ""; undefined не поддерживается
 
-const user = {
-  name: 'Tom',
-  age: 17,
-  isStudent: false,
-  driverLicense: null,
-  hobbies: ['football', 'diving'],
-  education: [
-    {
-      name: 'MIT Precourse',
-      graduateDate: '2020-05-04T14:48:46.105Z',
-    },
-  ],
+// JSON.parse(str, [reviver]);
+// JSON.stringify(value, [replacer, space]);
+
+// JSON.stringify(12); //"12"
+// JSON.stringify(false); //"false"
+// JSON.stringify(null); //"null"
+// JSON.stringify([1, 2, 3]); //"[1,2,3]"
+// JSON.stringify('text'); //""text""
+
+// // JSON.parse() - привести к литералу, это обратная операция к методу stringify
+// // JSON.parse("\"text\""); //"text"
+
+localStorage.clear();
+
+localStorage.setItem('hobbies', JSON.stringify({ name: 'John' }));
+localStorage.setItem('name', 'Tom');
+localStorage.setItem('age', JSON.stringify(17));
+
+// console.log(JSON.parse(localStorage.getItem('hobbies'))); //{name: "John"}
+
+// console.log(localStorage.hobbies); //лучше не применять
+
+// const getLocalStorgeData = () => {
+//   for (let i = 0; i < localStorage.length; i++) {
+//     localStorage.key(i);
+//   }
+// };
+
+// const getLocalStorgeData = () => {
+//   for (let i of localStorage) {
+//     localStorage.key(i);
+//   }
+// };
+
+const getLocalStorageData = () => {
+  return Object.entries(localStorage).reduce((acc, [key, value]) => {
+    let newValue;
+    try {
+      newValue = JSON.parse(value);
+    } catch (e) {
+      newValue = value;
+    }
+    return {
+      ...acc,
+      [key]: newValue,
+    };
+  }, {});
 };
+
+console.log(getLocalStorageData());
