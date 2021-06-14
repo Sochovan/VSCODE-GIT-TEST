@@ -1,7 +1,5 @@
-import { renderTasks } from './render';
+import { renderTasks } from './render.js';
 import { getItem, setItem } from './storage.js';
-
-const todoList = document.querySelector('ul');
 
 export const taskComplete = event => {
   const tasksList = getItem('taskslist') || [];

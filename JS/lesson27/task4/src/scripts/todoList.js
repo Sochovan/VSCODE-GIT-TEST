@@ -1,5 +1,5 @@
-import { taskComplete } from './updateTask';
-import { createElem } from './createTask';
+import { taskComplete } from './updateTask.js';
+import { createElem } from './createTask.js';
 
 export const initTodoListHundlers = () => {
   const buttonElem = document.querySelector('.create-task-btn');

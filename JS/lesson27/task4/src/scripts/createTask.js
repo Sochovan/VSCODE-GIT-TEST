@@ -1,5 +1,5 @@
-import { getItem, setItem } from './storage';
 import { renderTasks } from './render.js';
+import { getItem, setItem } from './storage.js';
 
 export const createElem = () => {
   const input = document.querySelector('.task-input');
@@ -20,3 +20,5 @@ export const createElem = () => {
 
   renderTasks();
 };
+
+console.log(createElem());

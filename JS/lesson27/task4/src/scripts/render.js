@@ -1,17 +1,10 @@
-// const tasks = [
-//   { text: 'Buy milk', done: false, id: Math.random() },
-//   { text: 'Pick up Tom from airport', done: false, id: Math.random() },
-//   { text: 'Visit party', done: false, id: Math.random() },
-//   { text: 'Visit doctor', done: true, id: Math.random() },
-//   { text: 'Buy meat', done: true, id: Math.random() },
-// ];
-
-import { getItem } from './storage';
-
-const listElem = document.querySelector('.list');
+import { getItem } from './storage.js';
 
 export const renderTasks = () => {
+  const listElem = document.querySelector('.list');
+
   const tasksList = getItem('tasksList') || [];
+  listElem.innerHTML = '';
 
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
@@ -30,7 +23,15 @@ export const renderTasks = () => {
 
       return listItemElem;
     });
-  listElem.innerHTML = '';
+
   listElem.append(...tasksElems);
 };
 
+// export const renderTasks = () => {
+//   const tasksList = getItem('tasksList') || [];
+
+//   listElem.innerHTML = '';
+//   const tasksElems = tasksList.sort(compareTasks).map(createListItem);
+
+//   listElem.append(...tasksElems);
+// };
