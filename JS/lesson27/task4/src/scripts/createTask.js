@@ -4,14 +4,14 @@ import { getItem, setItem } from './storage.js';
 export const createElem = () => {
   const input = document.querySelector('.task-input');
   const text = input.value;
-  if (!text) {
+  if (text === '') {
     return;
   }
-  input.value = '';
+  // input.value = '';
   const tasks = getItem('tasksList') || [];
 
   const newTasks = tasks.concat({
-    text: input,
+    text,
     done: false,
     id: Math.random(),
   });
@@ -20,5 +20,3 @@ export const createElem = () => {
 
   renderTasks();
 };
-
-console.log(createElem());
