@@ -5,12 +5,14 @@
 //   { text: 'Visit doctor', done: true, id: Math.random() },
 //   { text: 'Buy meat', done: true, id: Math.random() },
 // ];
+
+import { getItem } from './storage';
+
 const listElem = document.querySelector('.list');
 
-const input = document.querySelector('.task-input');
+export const renderTasks = () => {
+  const tasksList = getItem('tasksList') || [];
 
-
-const renderTasks = tasksList => {
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
     .map(({ text, done, id }) => {
@@ -32,6 +34,3 @@ const renderTasks = tasksList => {
   listElem.append(...tasksElems);
 };
 
-
-
-renderTasks(tasks);

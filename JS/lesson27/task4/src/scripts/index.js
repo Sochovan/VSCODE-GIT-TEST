@@ -1,7 +1,9 @@
 import { renderTasks } from './render.js';
+import { initTodoListHundlers } from './todoList.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderTasks();
+  initTodoListHundlers();
 });
 
 const onStorageChange = e => {

@@ -1,13 +1,22 @@
-const button = document.querySelector('.create-task-btn');
+import { getItem, setItem } from './storage';
+import { renderTasks } from './render.js';
 
-const createElem = () => {
-  if (input.value === '') {
+export const createElem = () => {
+  const input = document.querySelector('.task-input');
+  const text = input.value;
+  if (!text) {
     return;
   }
-
-  tasks.push({ text: input.value, done: false, id: Math.random() });
-  renderTasks(tasks);
   input.value = '';
-};
+  const tasks = getItem('tasksList') || [];
 
-button.addEventListener('click', createElem);
+  const newTasks = tasks.concat({
+    text: input,
+    done: false,
+    id: Math.random(),
+  });
+
+  setItem('tasksList', newTasks);
+
+  renderTasks();
+};
