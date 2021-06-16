@@ -27,6 +27,16 @@ const tree = {
   ],
 };
 
+// const markFavorites = (tree, favorites) => {
+//   const isFavorite = favorites.includes(tree.id);
+
+//   return {
+//     ...tree,
+//     isFavorite,
+//     nodes: tree.nodes.map(childNode => markFavorites(childNode, favorites)),
+//   };
+// };
+
 const markFavorites = (tree, favorites) => {
   const isFavorite = favorites.includes(tree.id);
 
@@ -36,6 +46,5 @@ const markFavorites = (tree, favorites) => {
     nodes: tree.nodes.map(childNode => markFavorites(childNode, favorites)),
   };
 };
-
 const result = markFavorites(tree, favorites);
 console.log(result);
