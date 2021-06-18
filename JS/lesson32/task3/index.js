@@ -4,8 +4,9 @@
 
 const makePromise = num => {
   const pr = new Promise(resolve => {
-    resolve;
+    resolve(num);
   });
+  return pr;
 };
 
 /*
