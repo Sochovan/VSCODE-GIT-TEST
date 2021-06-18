@@ -143,12 +143,45 @@
 
 // задачи с урока-------------------------------------------------
 
+// const user = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// user.getFullName();
+
+// const func = user.getFullName;
+// func(); // контекст потерян
+
+// const func = user.getFullName.bind(user); // John Doe - жестко привязали контекст
+
+// const user = {
+//   name: 'Doe',
+//   sayHi(age, message) {
+//     console.log(`${message}. I'm ${this.name}. I'm ${age} years old`);
+//   },
+// };
+
+// const func = user.sayHi;
+// func.apply({ name: 'Tom' }, [17, 'Hello']); // Hello. I'm Tom. I'm 17 years old - сразу вызывает функцию с определенным контекстом
+// func.call({ name: 'Tom' }, 17, 'Hello'); // Hello. I'm Tom. I'm 17 years old - сразу вызывает функцию с определенным контекстом
+
+console.log(this);
+
+function getThis() {
+  console.log(this);
+}
+getThis();
+
 const user = {
-  firstName: 'John',
-  lastName: 'Doe',
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+  getThis() {
+    console.log(this);
   },
 };
+user.getThis();
 
-console.log(user.getFullName());
+
+setTimeout(()=> )
