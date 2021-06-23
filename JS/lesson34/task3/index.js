@@ -44,7 +44,7 @@ const getFormData = event => {
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
     },
-    body: JSON.parse(formData),
+    body: JSON.stringify(formData),
   })
     .then(response => response.json())
     .then(result => {
