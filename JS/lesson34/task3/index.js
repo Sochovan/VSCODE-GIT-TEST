@@ -28,15 +28,15 @@ form.addEventListener('input', onValidateForm);
 const getFormData = event => {
   console.log('456');
   event.preventDefault();
-  // const formData = [...new FormData(form)].reduce(
-  //   (acc, [field, value]) => ({
-  //     ...acc,
-  //     [field]: value,
-  //   }),
-  //   {},
-  // );
-  const formData = `{${inputEmail.name}:${inputEmail.value}, ${inputName.name}:${inputName.value}, ${inputPasword.name}:${inputPasword.value}}`;
-
+  const formData = [...new FormData(form)].reduce(
+    (acc, [field, value]) => ({
+      ...acc,
+      [field]: value,
+    }),
+    {},
+  );
+  // const formData = `{${inputEmail.name}:${inputEmail.value}, ${inputName.name}:${inputName.value}, ${inputPasword.name}:${inputPasword.value}}`;
+  // const formData = Object.fromEntries(new FormData(inputs));
   console.dir(formData);
 
   fetch(baseUrl, {
@@ -44,7 +44,7 @@ const getFormData = event => {
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
     },
-    body: JSON.parse(formData),
+    body: JSON.stringify(formData),
   })
     .then(response => response.json())
     .then(result => {
