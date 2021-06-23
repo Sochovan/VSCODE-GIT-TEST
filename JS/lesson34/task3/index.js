@@ -35,7 +35,7 @@ const getFormData = event => {
   //   }),
   //   {},
   // );
-  const formData = `{${inputEmail.name}:${inputEmail.value},${inputName.name}:${inputName.value},${inputPasword.name}:${inputPasword.value}}`;
+  const formData = `{${inputEmail.name}:${inputEmail.value}, ${inputName.name}:${inputName.value}, ${inputPasword.name}:${inputPasword.value}}`;
 
   console.dir(formData);
 
