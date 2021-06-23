@@ -9,32 +9,51 @@ const error = document.querySelector('.error-text');
 // console.dir(button);
 
 // button activated
+// input: event
+// output: undefined
+
 const onValidateForm = () => {
+  console.log('123');
   if (form.reportValidity()) {
     button.disabled = false;
   }
 };
 onValidateForm();
 
-form.addEventListener('click', onValidateForm);
+form.addEventListener('input', onValidateForm);
 
 // get data for server
+// input:event
+// output: undeffined
 const getFormData = event => {
+  console.log('456');
   event.preventDefault();
-  const formData = [...new FormData(form)].reduce(
-    (acc, [field, value]) => ({
-      ...acc,
-      [field]: value,
-    }),
-    {},
-  );
-};
-  
+  // const formData = [...new FormData(form)].reduce(
+  //   (acc, [field, value]) => ({
+  //     ...acc,
+  //     [field]: value,
+  //   }),
+  //   {},
+  // );
+  const formData = `{${inputEmail.name}:${inputEmail.value}}`;
+
   console.log(formData);
-  alert(JSON.stringify(formData));
-  inputEmail.value = '';
-  inputName.value = '';
-  inputPasword.value = '';
+
+  fetch(baseUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+    body: JSON.stringify(formData),
+  })
+    .then(response => response.json())
+    .then(result => {
+      alert(JSON.stringify(result));
+      inputEmail.value = '';
+      inputName.value = '';
+      inputPasword.value = '';
+    })
+    .catch(() => (error.textContent = 'Failed to create user'));
 };
 
 form.addEventListener('submit', getFormData);
@@ -43,15 +62,5 @@ form.addEventListener('submit', getFormData);
 
 // post data on server
 
-const postOnServer = formData => {
-  console.log(formData);
-  return fetch(baseUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-    body: JSON.stringify(formData),
-  });
-};
-
-form.addEventListener('submit', postOnServer);
+// input: event
+// output:
