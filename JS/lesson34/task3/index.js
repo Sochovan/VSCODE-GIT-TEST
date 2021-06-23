@@ -28,8 +28,6 @@ const getFormData = event => {
     }),
     {},
   );
-
-  const formData = {`${inputEmail.name}:${inputEmail.value}`
 };
   
   console.log(formData);
