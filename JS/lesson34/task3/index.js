@@ -54,16 +54,12 @@ const getFormData = event => {
       inputPasword.value = '';
     })
     .catch(() => {
-      // error.textContent = 'Failed to create user';
-      Promise.reject(new Error('Failed to create user'));
+      error.textContent = 'Failed to create user';
+      // Promise.reject(new Error('Failed to create user'));
     });
 };
 
 form.addEventListener('submit', getFormData);
 
-// console.log(getFormData());
-
-// post data on server
-
 // input: event
-// output:
+// output: undefined
