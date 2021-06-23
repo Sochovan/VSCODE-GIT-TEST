@@ -7,6 +7,7 @@ export const taskComplete = event => {
   if (!isCheckbox) {
     return;
   }
+  
   const tasksList = getItem('tasksList');
   const taskId = event.target.dataset.id;
   const { text } = tasksList.find(task => task.id === taskId);
