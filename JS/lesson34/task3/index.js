@@ -28,16 +28,16 @@ form.addEventListener('input', onValidateForm);
 const getFormData = event => {
   console.log('456');
   event.preventDefault();
-  const formData = [...new FormData(form)].reduce(
-    (acc, [field, value]) => ({
-      ...acc,
-      [field]: value,
-    }),
-    {},
-  );
-  // const formData = `{${inputEmail.name}:${inputEmail.value}}`;
+  // const formData = [...new FormData(form)].reduce(
+  //   (acc, [field, value]) => ({
+  //     ...acc,
+  //     [field]: value,
+  //   }),
+  //   {},
+  // );
+  const formData = `{${inputEmail.name}:${inputEmail.value},${inputName.name}:${inputName.value},${inputPasword.name}:${inputPasword.value}}`;
 
-  // console.dir(JSON.parse(formData));
+  console.dir(formData);
 
   fetch(baseUrl, {
     method: 'POST',
