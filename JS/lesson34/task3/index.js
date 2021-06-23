@@ -29,6 +29,10 @@ const getFormData = event => {
     {},
   );
 
+  const formData = {`${inputEmail.name}:${inputEmail.value}`
+};
+  
+  console.log(formData);
   alert(JSON.stringify(formData));
   inputEmail.value = '';
   inputName.value = '';
@@ -42,6 +46,7 @@ form.addEventListener('submit', getFormData);
 // post data on server
 
 const postOnServer = formData => {
+  console.log(formData);
   return fetch(baseUrl, {
     method: 'POST',
     headers: {
@@ -51,6 +56,4 @@ const postOnServer = formData => {
   });
 };
 
-form.addEventListener('click', postOnServer);
-
-// postOnServer({ email: 'nas@gmail.com', username: 'dispatchEvent', password: '4354' });
+form.addEventListener('submit', postOnServer);
