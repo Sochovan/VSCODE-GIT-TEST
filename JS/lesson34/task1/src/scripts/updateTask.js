@@ -1,5 +1,5 @@
 import { renderTasks } from './render.js';
-import { getItem, setItem } from './storage.js';
+// import { getItem, setItem } from './storage.js';
 import { updateTask, getTasksList } from './tasksGateway.js';
 
 export const taskComplete = event => {
@@ -7,10 +7,18 @@ export const taskComplete = event => {
   if (!isCheckbox) {
     return;
   }
-  
-  const tasksList = getItem('tasksList');
+
+  let tasksList;
+  getTasksList().then(tasks => {
+    tasksList = tasks;
+  });
+  console.log(tasksList);
   const taskId = event.target.dataset.id;
-  const { text } = tasksList.find(task => task.id === taskId);
+  const text = tasksList.find(task => {
+    console.log(task);
+  });
+  console.log(text);
+  console.log(taskId);
   const done = event.target.checked;
 
   const updatedTask = {
@@ -21,8 +29,9 @@ export const taskComplete = event => {
   updateTask(taskId, updatedTask)
     .then(() => getTasksList())
     .then(newTasks => {
-      setItem('tasksList', newTasks);
-      renderTasks();
+      // setItem('tasksList', newTasks);
+      console.log(newTasks);
+      // renderTasks();
     });
 };
 
@@ -31,3 +40,4 @@ export const taskComplete = event => {
 // 3. Read new data from server
 // 4. Save new data to front-end storage;
 // 5. Update UI based on new data
+// getItem('tasksList')

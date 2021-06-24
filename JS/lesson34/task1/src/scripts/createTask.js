@@ -1,5 +1,5 @@
 import { renderTasks } from './render.js';
-import { getItem, setItem } from './storage.js';
+// import { getItem, setItem } from './storage.js';
 import { createTask, getTasksList } from './tasksGateway.js';
 
 export const createElem = () => {
@@ -18,9 +18,9 @@ export const createElem = () => {
   createTask(newTaskLi)
     .then(() => getTasksList())
     .then(newTasks => {
-      setItem('tasksList', newTasks);
-      renderTasks();
+      // setItem('tasksList', newTasks);
+      // renderTasks();
     });
 
-  // renderTasks();
+  renderTasks();
 };
