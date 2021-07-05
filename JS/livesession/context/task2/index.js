@@ -44,3 +44,13 @@ console.dir(sumBinded2());
 
 const sumBinded3 = myBind(sum, context, 10);
 console.dir(sumBinded3(30));
+
+
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+  sayHi();
+}
+
+new User('Nikita')
