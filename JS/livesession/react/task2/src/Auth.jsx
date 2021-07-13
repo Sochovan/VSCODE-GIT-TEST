@@ -3,50 +3,49 @@ import Login from "./Login.jsx";
 import Logout from "./Logout.jsx";
 import Spinner from "./Spinner.jsx";
 
-// 1.Show login by default
-// 2.Show spinner for 2 sec
-// 3.show logout
-// 4.show login after logout click
+// algo
+// 1. show login by default +++++
+// 2. show spinner for 2 sec after login click
+// 3. show logout
+// 4. show login after logout click
 
 class Auth extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isLoggedIn: true,
-      isSpinner: false,
-    };
-  }
-
-  handleLogin = () => {
+  state = {
+    isLoggedIn: false,
+    isLogging: false,
+  };
+  onLogin = () => {
+    debugger;
     this.setState({
-      isLoggedIn: true,
-      isSpinner: true,
+      isLogging: true,
     });
+    //input: func, ms
+    //output: undefined
 
     setTimeout(() => {
       this.setState({
-        isLoggedIn: false,
-        isSpinner: false,
+        isLoggedIn: true,
+        isLogging: false,
       });
     }, 2000);
   };
 
-  handleLogout = () => {
+  onLogout = () => {
     this.setState({
-      isLoggedIn: true,
-      isSpinner: false,
+      isLogging: false,
     });
   };
 
   render() {
-    let button;
-    if (this.state.isLoggedIn) {
-      button = <Login onLogin={this.handleLogin} />;
-    } else {
-      button = <Logout onLogout={this.handleLogout} />;
+    const { isLogging, isLoggedIn } = this.state;
+
+    if (isLogging) {
+      return <Spinner size={50} />;
     }
-    return <div>{this.state.isSpinner ? <Spinner size={40} /> : button}</div>;
+    if (isLoggedIn) {
+      return <Logout onLogout={this.onLogout} />;
+    }
+    return <Login onLogin={this.onLogin} />;
   }
 }
 
