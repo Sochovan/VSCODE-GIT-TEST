@@ -25,7 +25,7 @@ console.log(numbersList1);
 // выведи в консоль результат работы метода push, а так же массив numbersList2 после выполнения push
 
 // input: number
-// output: number
+// output: number - length of new array
 const numbersList2 = [1, 2, 3, 4, 5];
 const pushRes = numbersList2.push(111);
 
@@ -69,7 +69,7 @@ const numbersList4 = [1, 2, 3, 4, 5];
 // ==============================================================
 
 // input: callback, object(optional)
-// output: aray
+// output: array
 // callback:
 //     input: element(number), index(number)(optional), array(optional)
 //     output: boolean
@@ -93,7 +93,7 @@ const anotherNumbersList = [5, 0, 8, 10, -4, 50, 220];
 
 // 2 option------------------------------------------------------
 
-const bigNumbers = anotherNumbersList.filter(el => el > 5);
+const bigNumbers = anotherNumbersList.filter((el) => el > 5);
 
 console.log(anotherNumbersList);
 console.log(bigNumbers);
@@ -107,7 +107,9 @@ function filterCallback(element, index, array) {
 // const evenPositions = anotherNumbersList.filter(filterCallback);
 // console.log(evenPositions);
 
-const evenPositions = anotherNumbersList.filter((el, index) => el > 5 && index % 2 === 1);
+const evenPositions = anotherNumbersList.filter(
+  (el, index) => el > 5 && index % 2 === 1
+);
 console.log(evenPositions);
 
 /* метод filter */

@@ -1,19 +1,19 @@
 // Web service = это сущность, которая позволяет обмениваться информацией с другими серверами
 // API (Application Programming Interface) это стандартизированный веб сервис, где более четкие правила обмена информацией
 // Rest API - это архитектурный стиль (подход) для создания веб-сервиса. Все запросы производятся через http протокол
-// REST reqeust consists of sucn componnets:
+// REST reqeust consists of such componnets:
 // URL Path;
 // HTTP Method[GET, PUT, POST,Patch,DELETE]
 // Header(optional)
 // Parameters(optional)
-// Body(optional)
+// Body(optional) - кладут ту инфу, которую хотят сохранить на сервере
 
-// Принципы REST API
-// 1. Uniform resource identifiers
-// 2. Statelessness
-// 3. Client-Server model
-// 4. Caching
-// 5. Layered architecture
+Принципы REST API
+1. Uniform resource identifiers
+2. Statelessness
+3. Client-Server model
+4. Caching
+5. Layered architecture
 
 // статус-коды:
 // 200(ok)
