@@ -1,4 +1,3 @@
-"use strict";
 // function sumOfMillions() {
 //   let sum = 0;
 
@@ -49,9 +48,11 @@ function sendEmail() {
 }
 
 function sendEmailList() {
-  let result = 0;
+  let res = 0;
   for (let i = 1; i <= 30; i += 1) {
-    result += i;
+    res += i;
+    sendEmail(res);
   }
-  return sendEmail(result);
 }
+
+sendEmailList();
